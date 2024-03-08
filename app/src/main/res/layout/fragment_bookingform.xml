@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".fragments.BookingForm"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="1. Chọn chi nhánh" />
+
+        <AutoCompleteTextView
+            android:id="@+id/txtBranch"
+            android:background="@drawable/custom_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:maxLines="1"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="10dp"
+            android:inputType="text"
+            android:hint="Địa chỉ chi nhánh"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="2. Chọn số người sử dụng dịch vụ" />
+
+        <Spinner
+            android:id="@+id/spnBookingNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="10dp"
+            android:entries="@array/people_list" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="3. Chọn dịch vụ" />
+
+        <Button
+            android:id="@+id/btnServiceSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Nhấn vào đây để chọn dịch vụ" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="4. Chọn thợ cắt tóc của bạn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="5. Chọn thời gian" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/selectDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <GridLayout
+            android:id="@+id/selectHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="4"
+            android:paddingHorizontal="5dp">
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/custom_buttonprimary"
+            android:textColor="@drawable/custom_buttonprimary_text"
+            android:drawableRight="@drawable/custom_next_icon"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Tiếp theo" />
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/bookingItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0"
+        android:background="@drawable/custom_booking_item"
+        android:padding="10dp">
+        <TableRow>
+            <TextView android:id="@+id/txtUsername" android:text="Nguyễn văn A" android:textStyle="bold" android:textColor="@color/black"/>
+            <TextView android:id="@+id/txtbookingDate" android:text="11/12/2021 11:00"  android:textStyle="bold" android:textColor="@color/Green"/>
+            <ImageView android:id="@+id/ic_bookingItem" android:src="@drawable/ic_expand" android:tag="expand"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/itemShortDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/txtbookingServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Dịch vụ: "/>
+        <TextView
+            android:id="@+id/txtUserphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Điện thoại: "/>
+        <TextView
+            android:id="@+id/txtAssignTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Nhân viên: "/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
+            <TableRow>
+                <TextView
+                    android:id="@+id/txtbookingNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Số lượng: "/>
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"
+                    android:text="Tổng tiền: "/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>
